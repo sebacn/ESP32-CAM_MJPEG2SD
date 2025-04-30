@@ -9,6 +9,12 @@
 
 void setup() {
   logSetup();
+
+#ifdef CAMERA_MODEL_LILYGO_ESP32S3_CAM
+  // Initialize the board power parameters
+  setupPower();
+#endif
+
   LOG_INF("Selected board %s", CAM_BOARD);
   // prep storage
   if (startStorage()) {

@@ -46,6 +46,10 @@
 #include <esp_http_server.h>
 #include <esp_https_server.h>
 
+#ifdef CAMERA_MODEL_LILYGO_ESP32S3_CAM
+  #include "power.h"
+#endif
+
 // ADC
 #define ADC_ATTEN ADC_11db
 #define ADC_SAMPLES 16

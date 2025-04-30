@@ -531,6 +531,59 @@
 #define SD_MMC_CMD       19
 #define SD_MMC_D0        23
 
+#elif defined(CAMERA_MODEL_LILYGO_ESP32S3_CAM)
+#define CAM_BOARD "CAMERA_MODEL_LILYGO_ESP32S3_CAM"
+
+#define PWDN_GPIO_NUM               (-1)
+#define RESET_GPIO_NUM              (39)
+#define XCLK_GPIO_NUM               (38)
+#define SIOD_GPIO_NUM               (5)
+#define SIOC_GPIO_NUM               (4)
+#define VSYNC_GPIO_NUM              (8)
+#define HREF_GPIO_NUM               (18)
+#define PCLK_GPIO_NUM               (12)
+#define Y9_GPIO_NUM                 (9)
+#define Y8_GPIO_NUM                 (10)
+#define Y7_GPIO_NUM                 (11)
+#define Y6_GPIO_NUM                 (13)
+#define Y5_GPIO_NUM                 (21)
+#define Y4_GPIO_NUM                 (48)
+#define Y3_GPIO_NUM                 (47)
+#define Y2_GPIO_NUM                 (14)
+
+#ifdef I2C_SDA
+#undef I2C_SDA
+#endif
+
+#ifdef I2C_SCL
+#undef I2C_SCL
+#endif
+
+#define I2C_SDA                     (7)
+#define I2C_SCL                     (6)
+
+// TRIGER FROM PIR OR RADAR
+#define TRIGGER                     (17) //PIR_INPUT_PIN
+#define PIR_INPUT_PIN               (17)
+#define PMU_INPUT_PIN               (2)
+
+// I2S Microphone
+#define I2S_WS                      (42)
+#define I2S_SD                      (41)
+#define I2S_SCK                     (40)
+
+#define EXTERN_PIN1                 (16)
+#define EXTERN_PIN2                 (15)
+
+#define BUTTON_CONUT                (1)
+#define USER_BUTTON_PIN             (0)
+#define BUTTON_ARRAY                {USER_BUTTON_PIN}
+
+// SD Card
+#define SD_MMC_CLK                   (46)
+#define SD_MMC_CMD                   (45)
+#define SD_MMC_D0                    (3)
+
 #elif defined(AUXILIARY)
 #define CAM_BOARD "AUXILIARY"
 #define PWDN_GPIO_NUM -1
